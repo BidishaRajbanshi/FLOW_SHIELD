@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLOW-SHIELD | Counterfactual Flood Digital Twin</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Bar: Live Ops Header -->
+    <header class="top-header" id="header-container"></header>
+
+    <!-- Center Workspace -->
+    <div class="workspace-grid">
+      <!-- Left / Center: Large Interactive Digital Twin City Simulation -->
+      <main class="simulation-stage" id="map-container"></main>
+
+      <!-- Right Command Sidebar -->
+      <aside class="sidebar-panel">
+        <div id="risk-overview-container"></div>
+        <div id="emergency-panel-container"></div>
+        <div id="region-details-container"></div>
+      </aside>
+
+      <!-- Bottom Workspace Bar: Time Machine & Lower Multi-Tab Tray -->
+      <div class="bottom-dock">
+        <!-- Time Machine Scrubber -->
+        <div id="time-machine-container"></div>
+
+        <!-- Lower Multi-Tab Tray: Causal Attribution & Butterfly Effect -->
+        <div class="lower-tray-container" id="lower-tray-el">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div class="tray-nav">
+              <button class="tray-tab-btn active" id="tab-btn-why">Why Is This Region Flooding?</button>
+              <button class="tray-tab-btn" id="tab-btn-butterfly">The Flood Butterfly Effect</button>
+            </div>
+            <button class="modal-close-btn" id="btn-close-tray" style="font-size: 1.1rem;">&times;</button>
+          </div>
+
+          <div id="why-flooding-container"></div>
+          <div id="butterfly-container" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals and Floating Drawers -->
+    <div class="modal-overlay" id="whatif-modal-el"></div>
+    <div class="modal-overlay" id="comparison-modal-el"></div>
+    <div class="modal-overlay" id="replay-modal-el"></div>
+    <div class="modal-overlay" id="report-modal-el"></div>
+    <div class="copilot-drawer" id="copilot-drawer-el"></div>
+  </div>
+
+  <!-- Application Bootstrap -->
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
